@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mynote-project
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-note
+  template:
+    metadata:
+      labels:
+        app: my-note
+    spec:
+      containers:
+      - name: my-note-container
+        image: nish1102/mydemoproject:latest
+        ports:
+        - containerPort: 80
