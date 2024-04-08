@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mynote-project
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: my-note
